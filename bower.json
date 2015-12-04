@@ -1,0 +1,23 @@
+{
+  "name": "VRcollab",
+  "version": "0.0.1",
+  "authors": [
+    "jiahen <wizztjh@gmail.com>",
+    "SantanMaddi <saisantan2004@gmail.com>"
+  ],
+  "description": "Virtual Reality Editor",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webvr-markup": "*",
+    "materialize" : "*",
+    "CodeMirror"  : "5.9.0"
+  }
+}

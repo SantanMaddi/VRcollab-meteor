@@ -1,0 +1,87 @@
+<template name="editLayout">
+  <div class="row" rows="3" style='height: 80vh;'>
+    <div class="col s6" style="height: inherit">
+      <div>
+        <div>
+        <button class="btn waves-effect waves-light orange-text text-darken-3 black right"
+          type="submit" name="action" onclick="run()">Run
+        </button>
+        </div>
+        <div>
+        <button class="btn waves-effect waves-light orange-text text-darken-3 black right"
+          type="submit" name="action" onclick="run()">Save
+        </button>
+        </div>
+      </div>
+      <br>
+      <div>
+        <span class="window_lable" style="opacity: 0.3; overflow: visible">Metaroom Markup
+        </span>
+        <textarea id="meta-verse-code" style="height: 100%;display: none;">
+<meta-room width='10' height='10' length='20'>
+  <meta-wall align='left'>
+  </meta-wall>
+  <meta-wall align='right'>
+  </meta-wall>
+  <meta-wall align='front' meta-style='material-color: #e7e3e4;'>
+  </meta-wall>
+  <meta-wall align='back'>
+  </meta-wall>
+  <meta-wall align='ceiling'>
+  </meta-wall>
+  <meta-floor>
+    <meta-table height='3'>
+      <meta-tsurface>
+        <meta-item width='2' length='2' height='4' material-src='/assets/model/pokka/model_mesh.obj.mtl' geometry-src='/assets/model/pokka/model_mesh.obj' id='meta-item-on-floor'></meta-item>
+        <meta-item width='1' length='1' height='2' material-src='/assets/model/pokka/model_mesh.obj.mtl' geometry-src='/assets/model/pokka/model_mesh.obj' id='meta-item-on-floor'></meta-item>
+      </meta-tsurface>
+      <meta-tbottom align='right'>
+      </meta-tbottom>
+      <meta-tbottom align='left'>
+      </meta-tbottom>
+    </meta-table>
+    <meta-table height='2'>
+      <meta-tsurface>
+        <meta-item class='animate' width='3' length='3' height='2' material-src='/assets/model/bag/model_mesh.obj.mtl' geometry-src='/assets/model/bag/model_mesh.obj' id='meta-item-on-floor'></meta-item>
+      </meta-tsurface>
+      <meta-tbottom align='back'>
+      </meta-tbottom>
+    </meta-table>
+  </meta-floor>
+</meta-room>
+        </textarea>
+        <br>
+        <div>
+          <span class="window_lable" style="opacity: 0.3; overflow: visible">MetaStyle</span>
+        </div>
+        <textarea id="meta-style-code" style="height: 100%; display: none;">
+meta-table{
+  thickness: 0.3;
+  tbottom-padding-top: 0.3;
+  tbottom-padding-bottom: 0.1;
+  material-color: #416fa0;
+}
+meta-wall{
+  material-color: #d3d3d3;
+}
+.animate {
+  position: absolute;
+  animation-name: spinning;
+  animation-duration: 10s;
+}
+@keyframes spinning {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+        </textarea>
+      </div>
+    </div>
+    <div class="col s6" style="height: inherit;">
+      <iframe id="result" style="width: 100%;height: inherit" allowfullscreen></iframe>
+    </div>
+  </div>
+</template>

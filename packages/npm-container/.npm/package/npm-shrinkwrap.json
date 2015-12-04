@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "codemirror": {
+      "version": "5.9.0"
+    },
+    "hashids": {
+      "version": "1.0.2"
+    }
+  }
+}
